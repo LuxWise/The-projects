@@ -1,9 +1,11 @@
-function TodoCounter() {
+import './TodoCounter.css';
+
+function TodoCounter({ total, completed }) {
   return(
-    <h1>
-      Se competarion 3 de 10 TODOS
+    <h1> 
+      Se completarion {total} de {completed} TODOS
     </h1>
   );
 }
-
+  
 export { TodoCounter };

@@ -1,6 +1,6 @@
 function CreateTodoButton() {
   return(
-    <button>Listar</button> 
+    <button>+</button> 
   );
 }
 

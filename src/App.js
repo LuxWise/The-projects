@@ -1,35 +1,36 @@
-import logo from './platzi.webp';
-import './App.css';
+import React from 'react';
+
 import { TodoCounter } from './TodoCounter.js';
+import { TodoSearch } from './TodoSearch.js';
+import { TodoList } from './TodoList.js';
+import { TodoItem } from './TodoItem.js';
+import { CreateTodoButton } from './CreateTodoButton.js';
+
+const defaultTodos = [
+  { text: 'Estudiar fullstack', completed: true },
+  { text: 'Tomar el Curso de Intro a React.js', completed: true },
+  { text: 'Conseguir trabajo', completed: false },
+  { text: 'Jugar Zelda BOW', completed: false },
+];
+
 
 function App() {
+
+  // <> = <React.Fragment>
+  
   return (
-    <div className="App">
-      
-      <TodoCounter />
+    <>  
+      <TodoCounter completed={16} total={25} />
       <TodoSearch />
 
       <TodoList>
-
-        <TodoItem />
-        <TodoItem />
-        <TodoItem />
-
+        {defaultTodos.map(todo => (
+          <TodoItem key={todo.text} text={todo.text}/>
+        ))}
       </TodoList>
-
+      
       <CreateTodoButton />
-
-   </div>
-  ); 
-}
-
-function TodoItem() {
-  return(
-    <li>
-      <span>V</span>
-      <p>Comer mucho</p>
-      <span>X</span>
-    </li>
+    </>
   );
 }
 
