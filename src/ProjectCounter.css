@@ -1,6 +1,23 @@
-h1{
-	font-size: 24px;
-	text-align: center;
-	margin: 0;
-	padding: 48px;
+.projectsDescription{
+	display: flex;
+	width: 40%;
+	height: 100%;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.totalProjects{
+	width: 50%;
+	margin-left: 15%;
+}
+
+.totalProjects h3{
+	border-bottom: 2px solid black;
+	font-weight: 500;
+}
+
+
+.topicProjects{
+	width: 50%;
+	margin-left: 15%;
 }

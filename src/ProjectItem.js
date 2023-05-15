@@ -1,10 +1,13 @@
+import './ProjectItem.css';
+
 function ProjectItem(props) {
+  
   return(
-    <li>
-      <span>V {props.completed}</span>
-      <p>{props.text}</p>
-      <span>X</span>
-    </li>
+    <div class="projectItem">
+	    <div class="color" style={{backgroundColor:props.color}}></div>
+      <p>{ props.title }</p>
+      <time>{ props.date }</time>
+    </div>
   );
 }
 

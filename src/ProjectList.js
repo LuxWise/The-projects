@@ -1,8 +1,10 @@
+import './ProjectList.css';
+
 function ProjectList(props) {
   return(
-    <ul>
+    <div className="theProjets">
       {props.children}
-    </ul>
+    </div>
   );
 }
 

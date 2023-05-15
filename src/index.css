@@ -36,3 +36,10 @@ nav {
 	align-items: center;
 	gap: 10%;
 }
+
+.projectsContainer{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	gap: 10px;
+}

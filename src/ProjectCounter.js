@@ -1,10 +1,15 @@
 import './ProjectCounter.css';
 
-function ProjectCounter({ total, completed }) {
+function ProjectCounter({ total }) {
   return(
-    <h1> 
-      Se completarion {total} de {completed} TODOS
-    </h1>
+    <div class="projectsDescription">
+      <div class="totalProjects">	
+	      <h3>Total proyectos</h3>
+	        <div>
+            <p>{total} Proyectos en proseso</p>
+	        </div>
+      </div>
+    </div>
   );
 }
   

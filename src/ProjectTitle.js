@@ -3,7 +3,7 @@ import './ProjectTitle.css';
 function ProjectTitle() {
   return(
     <div class="projects">
-      <h2>Proyectos</h2>
+      <h2>Projects</h2>
     </div>
   );
 }

@@ -6,24 +6,26 @@ import { ProjectIndex } from './ProjectIndex.js';
 import { ProjectSearch } from './ProjectSearch.js';
 import { ProjectUser } from './ProjectUser.js';
 import { ProjectTitle } from './ProjectTitle';
+import { CreateProjectButton } from './CreateProjectButton.js';
 
 import { ProjectList } from './ProjectList.js';
 import { ProjectItem } from './ProjectItem.js';
-import { CreateProjectButton } from './CreateProjectButton.js';
+import { ProjectCounter } from './ProjectCounter.js';
 
-
-const defaultTodos = [
+const defaultProjects = [
   { title: 'Project Water', color: '#E1D46C', date: '10-enero-2020'  },
-  { title: 'Project masters of data', color: '#F1F5D4', date: '26-marzo-2021' },
-  { title: 'Project security', color: '#D1EAF1', date: '13-octubre-2022' },
-  { title: 'Project projects', color: '#E3D3F4', date: '20-febrero-2023' },
+  { title: 'Project masters of data', color: '#C4D4D4', date: '26-marzo-2021' },
+  { title: 'Project security', color: '#CFD3C1', date: '13-octubre-2022' },
+  { title: 'Project projects', color: '#3D3F4D', date: '20-febrero-2023' },
 ];
 
 
 function App() {
 
   // <> = <React.Fragment>
-  
+
+  const total = defaultProjects.length;
+
   return (
     <>
       <nav>
@@ -38,6 +40,21 @@ function App() {
       <section className='titlesContainer'>
         <ProjectTitle/>
         <CreateProjectButton/> 
+      </section>
+      <section class="projectsContainer">
+        <ProjectList>
+          {defaultProjects.map(project => (
+            <ProjectItem 
+              key={project.title}
+              color={project.color}
+              title={project.title}
+              date={project.date}
+            />
+          ))}
+        </ProjectList>
+
+        <ProjectCounter total={total} />
+
       </section>
     </>
   );

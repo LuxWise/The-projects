@@ -1,0 +1,31 @@
+.projectItem{
+	display: grid;
+	grid-template-columns: 15% 60% 25%;
+	margin-bottom: 6%;
+	border-radius: 10px;
+	padding: 10px 0 10px 0;
+	transition: 0.6s ease;
+	cursor: pointer;
+	box-shadow: 0px 0px 2px 3px rgba(209,197,209,0.4);
+}
+
+.projectItem:hover{
+	background-color: #D8F6FA;
+}
+
+.projectItem .color{
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 15%;	
+}
+
+.projectItem p {
+	font-size: var(--lg);
+}
+
+.projectItem time{
+	margin: auto;
+	font-size: var(--sm);
+	color: var(--date) ;
+}
