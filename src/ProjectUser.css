@@ -1,0 +1,20 @@
+ul li{
+	align-items: center;
+	display: flex;
+	gap: 15px;
+}
+
+#avatar{
+	object-fit: cover;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #E5E5F3;
+	border-radius: 50%;
+}
+
+#email{
+	color: white;
+	font-weight: 400;
+	font-size: var(--md);
+	margin: 0;
+}

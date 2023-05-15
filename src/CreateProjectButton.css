@@ -1,0 +1,22 @@
+.newProject{
+	width: 50%;
+	background: #446989;
+	border-radius: 10px;
+	margin-right: 10%;
+}
+
+.newProject:hover{
+	box-shadow: 0px 0px 5px 1px rgba(203, 228, 236, 0.5);
+}
+
+.newProject button{
+	width: 100%;
+	background: transparent;
+	border: none;
+	text-align: center;	
+	padding: 10px 20px;
+	font-size: var(--md);
+	cursor: pointer;
+	color: white;
+	font-weight: 500;
+}

@@ -1,0 +1,6 @@
+li a{
+	color: white; 
+	font-weight: 500;
+	font-size: var(--lg);
+	padding-left: 20px;
+}

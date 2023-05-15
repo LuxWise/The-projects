@@ -1,0 +1,28 @@
+.search{
+	background-color: #D1EAF1;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.search input {
+	font-size: var(--sm);
+	background: transparent;
+	border: none;
+	width: 500px;
+	height: 100%;
+	outline: none;
+	padding: 5px 10px;
+}
+
+.search button{
+	border: none;
+	background: transparent;
+}
+
+.search button img {
+	width: 26px;
+	height: 25px;
+	cursor: pointer;
+}

@@ -1,4 +1,4 @@
-function TodoList(props) {
+function ProjectList(props) {
   return(
     <ul>
       {props.children}
@@ -6,4 +6,4 @@ function TodoList(props) {
   );
 }
 
-export { TodoList };
+export { ProjectList };

@@ -1,7 +1,11 @@
-function CreateTodoButton() {
+import './CreateProjectButton.css';
+
+function CreateProjectButton() {
   return(
-    <button>+</button> 
+    <div class="newProject">
+      <button type="submit" class="CreateNewProject">Nuevo Proyecto</button>
+	  </div> 
   );
 }
 
-export { CreateTodoButton };
+export { CreateProjectButton };

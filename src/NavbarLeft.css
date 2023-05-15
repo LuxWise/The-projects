@@ -1,0 +1,14 @@
+.navbar-left ul{
+	width: 100%;
+	align-items: center;
+	display: flex;
+	gap: 30px;
+	list-style: none;
+	padding: 0;
+}
+
+.navbar-left ul li{
+	padding: 0 30px;
+	margin: 2px;
+	color: var(--text-light);
+}
