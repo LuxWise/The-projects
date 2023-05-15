@@ -1,8 +1,14 @@
+.projectItemContainer{
+	display: grid;
+	grid-template-columns: 85% 15%;
+}
+
 .projectItem{
+	width: 100%;
 	display: grid;
 	grid-template-columns: 15% 60% 25%;
 	margin-bottom: 6%;
-	border-radius: 10px;
+	border-radius: 10px 1px 1px 10px;
 	padding: 10px 0 10px 0;
 	transition: 0.6s ease;
 	cursor: pointer;
@@ -28,4 +34,36 @@
 	margin: auto;
 	font-size: var(--sm);
 	color: var(--date) ;
+}
+
+.ProjectStatus {
+	width: 70px;
+	height: 77px;
+	background-color: #d0e6ed;
+	margin-left: 5px;
+	border-radius: 1px 7px 7px 1px;
+	position: relative;
+	box-shadow: 0px 0px 4px -1px rgba(79, 94, 97, 0.75);
+;
+}
+
+.ProjectStatus span {
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	font-size: 20px;
+}
+
+
+@media(max-width: 875px){
+	.projectItem time{
+		display: none;
+	}
+	.projectItem .color {
+		margin-left: 20px;
+	}
+	.projectItem p {
+		margin-left: 40px;
+	}
 }

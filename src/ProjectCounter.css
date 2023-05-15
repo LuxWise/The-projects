@@ -3,12 +3,11 @@
 	width: 40%;
 	height: 100%;
 	flex-direction: column;
-	gap: 30px;
 }
 
 .totalProjects{
 	width: 50%;
-	margin-left: 15%;
+	margin: 5%;
 }
 
 .totalProjects h3{
@@ -20,4 +19,14 @@
 .topicProjects{
 	width: 50%;
 	margin-left: 15%;
+}
+
+.topicProjects{
+	width: 50%;
+	margin: 5%;
+}
+
+.topicProjects h3{
+	border-bottom: 2px solid black;
+	font-weight: 500;
 }

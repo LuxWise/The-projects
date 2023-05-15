@@ -9,6 +9,10 @@ function ProjectCounter({ total }) {
             <p>{total} Proyectos en proseso</p>
 	        </div>
       </div>
+      
+      <div class="topicProjects">
+        <h3>Tematicas utilizadas</h3>
+      </div>
     </div>
   );
 }

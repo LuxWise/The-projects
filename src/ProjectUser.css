@@ -17,3 +17,9 @@ ul li{
 	font-size: var(--md);
 	margin: 0;
 }
+
+@media (max-width: 1140px){
+	#email {
+		display: none;
+	}
+}

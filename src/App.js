@@ -13,10 +13,10 @@ import { ProjectItem } from './ProjectItem.js';
 import { ProjectCounter } from './ProjectCounter.js';
 
 const defaultProjects = [
-  { title: 'Project Water', color: '#E1D46C', date: '10-enero-2020'  },
-  { title: 'Project masters of data', color: '#C4D4D4', date: '26-marzo-2021' },
-  { title: 'Project security', color: '#CFD3C1', date: '13-octubre-2022' },
-  { title: 'Project projects', color: '#3D3F4D', date: '20-febrero-2023' },
+  { title: 'Project Water', color: '#E1D46C', date: '10-enero-2020', status: 'x'  },
+  { title: 'Project masters of data', color: '#C4D4D4', date: '26-marzo-2021', status: 'v' },
+  { title: 'Project security', color: '#CFD3C1', date: '13-octubre-2022', status: '~' },
+  { title: 'Project projects', color: '#3D3F4D', date: '20-febrero-2023', status: '~' },
 ];
 
 
@@ -49,6 +49,7 @@ function App() {
               color={project.color}
               title={project.title}
               date={project.date}
+              status={project.status}
             />
           ))}
         </ProjectList>
