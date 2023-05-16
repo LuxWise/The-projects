@@ -47,12 +47,27 @@
 ;
 }
 
-.ProjectStatus span {
+.status {
 	position: absolute;
 	top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 	font-size: 20px;
+}
+
+.status-check--prosess{
+	color: green;
+	font-weight: 600;
+}
+
+.status-check--detailed{
+	color: blue;
+	font-weight: 600;
+}
+
+.status-check--abandoned{
+	color: red;
+	font-weight: 600;
 }
 
 
