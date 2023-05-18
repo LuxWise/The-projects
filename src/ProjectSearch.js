@@ -5,7 +5,11 @@ function ProjectSearch() {
   return(
     <li>
       <div className='search'>
-        <input type='text' placeholder="Search Project" />
+        <input 
+          placeholder="Search Project"
+          onChange={(event) => {
+            console.log(event.target.value)
+        }}/>
 				<button type='submit'><img src={searchIcon}/></button>
       </div>
     </li>
