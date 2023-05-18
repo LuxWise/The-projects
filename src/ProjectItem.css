@@ -1,13 +1,13 @@
 .projectItemContainer{
 	display: grid;
 	grid-template-columns: 85% 15%;
+	margin-bottom: 6%;
 }
 
 .projectItem{
 	width: 100%;
 	display: grid;
 	grid-template-columns: 15% 60% 25%;
-	margin-bottom: 6%;
 	border-radius: 10px 1px 1px 10px;
 	padding: 10px 0 10px 0;
 	transition: 0.6s ease;
@@ -38,7 +38,7 @@
 
 .ProjectStatus {
 	width: 70px;
-	height: 77px;
+	height: 100%;
 	background-color: #d0e6ed;
 	margin-left: 5px;
 	border-radius: 1px 7px 7px 1px;
