@@ -24,14 +24,38 @@ function App() {
 
   // <> = <React.Fragment>
 
-  const total = defaultProjects.length;
+  const [projects, setProjects] = React.useState(defaultProjects);
+
+  const [searchValue, setSearchValue] = React.useState('');
+    console.log('se buscan los proyectos de ' + searchValue);
+
+  const searchedProjects = projects.filter((project) => {
+
+    const projectTitle = project.title.toLocaleLowerCase();
+    const searchTittle = searchValue.toLocaleLowerCase();
+
+    return projectTitle.includes(searchTittle);
+
+  });  
+
+  const processProjets = projects.filter(
+    project => project.status === 'v' ).length;
+  const detainedProjets = projects.filter(
+    project => project.status === '~' ).length;
+  const abandonedProjets = projects.filter(
+    project => project.status === 'x' ).length;
+  
+  const totalProjects  = projects.length;
 
   return (
     <>
       <nav>
         <NavbarLeft>
           <ProjectIndex/>
-          <ProjectSearch/>
+          <ProjectSearch
+            searchValue = {searchValue}
+            setSearchValue = {setSearchValue}
+          />
         </ NavbarLeft>
         <NavbarRight>
           <ProjectUser name='jcsanchez55' />
@@ -43,18 +67,23 @@ function App() {
       </section>
       <section class="projectsContainer">
         <ProjectList>
-          {defaultProjects.map(project => (
+          {searchedProjects.map(project => (
             <ProjectItem 
-              key={project.title}
-              color={project.color}
-              title={project.title}
-              date={project.date}
-              status={project.status}
+              key = {project.title}
+              color = {project.color}
+              title = {project.title}
+              date = {project.date}
+              status = {project.status}
             />
           ))}
         </ProjectList>
 
-        <ProjectCounter total={total} />
+        <ProjectCounter 
+          total = {totalProjects} 
+          processProjets = {processProjets}
+          detainedProjets = {detainedProjets}
+          abandonedProjets = {abandonedProjets}
+        />
 
       </section>
     </>

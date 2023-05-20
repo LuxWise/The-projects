@@ -1,6 +1,11 @@
 import './ProjectCounter.css';
 
-function ProjectCounter({ total }) {
+function ProjectCounter({ 
+  total, 
+  processProjets, 
+  detainedProjets,
+  abandonedProjets
+}) {
   return(
     <div class="projectsDescription">
       <div class="totalProjects">	
@@ -11,7 +16,10 @@ function ProjectCounter({ total }) {
       </div>
       
       <div class="topicProjects">
-        <h3>Tematicas utilizadas</h3>
+        <h3>Estado de los proyectos</h3>
+        <p>{processProjets} Proyectos en proseso </p>
+        <p>{detainedProjets} Projectos detenidos </p>
+        <p>{abandonedProjets} Projectos abandonados </p>
       </div>
     </div>
   );

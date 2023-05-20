@@ -4,10 +4,12 @@ function ProjectItem({ color,title,date,status }) {
 
   const process = 'v';
   const detained = '~';
+  const abandoned = 'x';
 
   let colorStatus = 
-    status == process ? 'status-check--prosess' :
-    status == detained ? 'status-check--detailed': 'status-check--abandoned';
+    status === process ? 'status-check--prosess' :
+    status === detained ? 'status-check--detailed': 
+    status === abandoned ? 'status-check--abandoned': null;
   
   return(
     <div className='projectItemContainer'>
