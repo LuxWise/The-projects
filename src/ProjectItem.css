@@ -53,14 +53,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
 	font-size: 20px;
+	cursor: pointer;
 }
 
-.status-check--prosess{
+.status-check--process{
 	color: green;
 	font-weight: 600;
 }
 
-.status-check--detailed{
+.status-check--detained{
 	color: blue;
 	font-weight: 600;
 }

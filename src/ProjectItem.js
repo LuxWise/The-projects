@@ -1,16 +1,13 @@
 import './ProjectItem.css';
 
-function ProjectItem({ color,title,date,status }) {
+function ProjectItem({ color,title,date,status,onStatus}) {
 
-  const process = 'v';
-  const detained = '~';
-  const abandoned = 'x';
+  const colorStatus = {
+    'v': 'status-check--process',
+    '~': 'status-check--detained',
+    'x': 'status-check--abandoned'
+  }
 
-  let colorStatus = 
-    status === process ? 'status-check--prosess' :
-    status === detained ? 'status-check--detailed': 
-    status === abandoned ? 'status-check--abandoned': null;
-  
   return(
     <div className='projectItemContainer'>
       
@@ -24,7 +21,7 @@ function ProjectItem({ color,title,date,status }) {
       
       <div className='ProjectStatus'>
   
-        <span className={`status ${ colorStatus } }`}>
+        <span onClick={onStatus} className={`status ${ colorStatus[status] } }`}>
           {status}
         </span>
 

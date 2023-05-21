@@ -25,19 +25,18 @@ function App() {
   // <> = <React.Fragment>
 
   const [projects, setProjects] = React.useState(defaultProjects);
-
   const [searchValue, setSearchValue] = React.useState('');
-    console.log('se buscan los proyectos de ' + searchValue);
+  
+  const totalProjects = projects.length;
 
   const searchedProjects = projects.filter((project) => {
-
     const projectTitle = project.title.toLocaleLowerCase();
     const searchTittle = searchValue.toLocaleLowerCase();
 
     return projectTitle.includes(searchTittle);
-
   });  
 
+  
   const processProjets = projects.filter(
     project => project.status === 'v' ).length;
   const detainedProjets = projects.filter(
@@ -45,7 +44,24 @@ function App() {
   const abandonedProjets = projects.filter(
     project => project.status === 'x' ).length;
   
-  const totalProjects  = projects.length;
+
+  const statusProjects = (title) => {
+
+    const statusArray = [...projects];
+    const statusIndex = statusArray.findIndex(
+      status => status.title === title
+    );
+
+    const setStatus = {
+      'v': '~',
+      '~': 'x',
+      'x': 'v'
+    };
+
+    statusArray[statusIndex].status = setStatus[statusArray[statusIndex].status]
+
+    setProjects(statusArray);
+  }
 
   return (
     <>
@@ -74,6 +90,7 @@ function App() {
               title = {project.title}
               date = {project.date}
               status = {project.status}
+              onStatus = {() => statusProjects(project.title)}
             />
           ))}
         </ProjectList>
