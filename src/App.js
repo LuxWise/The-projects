@@ -59,7 +59,6 @@ function App() {
     };
 
     statusArray[statusIndex].status = setStatus[statusArray[statusIndex].status]
-
     setProjects(statusArray);
   }
 

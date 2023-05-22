@@ -11,15 +11,15 @@ function ProjectCounter({
       <div class="totalProjects">	
 	      <h3>Total proyectos</h3>
 	        <div>
-            <p>{total} Proyectos en proseso</p>
+            <p>{total} Proyectos en proceso</p>
 	        </div>
       </div>
       
       <div class="topicProjects">
         <h3>Estado de los proyectos</h3>
-        <p>{processProjets} Proyectos en proseso </p>
-        <p>{detainedProjets} Projectos detenidos </p>
-        <p>{abandonedProjets} Projectos abandonados </p>
+        <p>{processProjets} Proyectos en proceso </p>
+        <p>{detainedProjets} Proyectos detenidos </p>
+        <p>{abandonedProjets} Proyectos abandonados </p>
       </div>
     </div>
   );
