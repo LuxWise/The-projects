@@ -12,6 +12,7 @@ import { ProjectList } from './ProjectList.js';
 import { ProjectItem } from './ProjectItem.js';
 import { ProjectCounter } from './ProjectCounter.js';
 
+/*
 const defaultProjects = [
   { title: 'Project Water', color: '#E1D46C', date: '10-enero-2020', status: 'x'  },
   { title: 'Project masters of data', color: '#C4D4D4', date: '26-marzo-2021', status: 'v' },
@@ -20,15 +21,21 @@ const defaultProjects = [
 ];
 
 
-localStorage.setItem('PROJECTS_V1', defaultProjects)
+const projectStringified = JSON.stringify(defaultProjects);
+
+localStorage.setItem('PROJECTS_V1', projectStringified)
+
+*/
 
 function App() {
 
-  let parcedProjects = localStorage.getItem('PROJECTS_V1')
+  const localStorageTodos = localStorage.getItem('PROJECTS_V1');
+
+  let parcedProjects = JSON.parse(localStorageTodos);
 
   // <> = <React.Fragment>
 
-  const [projects, setProjects] = React.useState(defaultProjects);
+  const [projects, setProjects] = React.useState(parcedProjects);
   const [searchValue, setSearchValue] = React.useState('');
   
   const totalProjects = projects.length;
