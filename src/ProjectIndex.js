@@ -3,7 +3,7 @@ import './ProjectIndex.css';
 function ProjectIndex() {
   return(
     <li>
-      <a>Projects</a>
+      <p href='#'>Projects</p>
     </li>
     
   );

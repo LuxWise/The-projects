@@ -20,7 +20,11 @@ const defaultProjects = [
 ];
 
 
+localStorage.setItem('PROJECTS_V1', defaultProjects)
+
 function App() {
+
+  let parcedProjects = localStorage.getItem('PROJECTS_V1')
 
   // <> = <React.Fragment>
 
