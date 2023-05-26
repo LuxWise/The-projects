@@ -6,9 +6,9 @@ function ProjectItem({ color,title,date,status,onStatus }) {
   return(
     <div className='projectItemContainer'>
       
-      <div class="projectItem">
+      <div className="projectItem">
         
-        <div class="color" style={{ backgroundColor : color }}></div>
+        <div className="color" style={{ backgroundColor : color }}></div>
         <p>{ title }</p>
         <time>{ date }</time>
 
