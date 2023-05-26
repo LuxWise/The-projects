@@ -28,10 +28,16 @@ localStorage.setItem('PROJECTS_V1', projectStringified)
 */
 
 function App() {
+  const localStorageProjects = localStorage.getItem('PROJECTS_V1');
 
-  const localStorageTodos = localStorage.getItem('PROJECTS_V1');
+  let parcedProjects;
 
-  let parcedProjects = JSON.parse(localStorageTodos);
+  if(!localStorageProjects){
+    localStorage.setItem('PROJECTS_V1', JSON.stringify([]));
+    parcedProjects = [];  
+  }else {
+    parcedProjects = JSON.parse(localStorageProjects);
+  }
 
   // <> = <React.Fragment>
 
@@ -91,7 +97,7 @@ function App() {
         <ProjectTitle/>
         <CreateProjectButton/> 
       </section>
-      <section class="projectsContainer">
+      <section className="projectsContainer">
         <ProjectList>
           {searchedProjects.map(project => (
             <ProjectItem 

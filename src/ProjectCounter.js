@@ -7,15 +7,15 @@ function ProjectCounter({
   abandonedProjets
 }) {
   return(
-    <div class="projectsDescription">
-      <div class="totalProjects">	
+    <div className="projectsDescription">
+      <div className="totalProjects">	
 	      <h3>Total proyectos</h3>
 	        <div>
             <p>{total} Proyectos en proceso</p>
 	        </div>
       </div>
       
-      <div class="topicProjects">
+      <div className="topicProjects">
         <h3>Estado de los proyectos</h3>
         <p>{processProjets} Proyectos en proceso </p>
         <p>{detainedProjets} Proyectos detenidos </p>

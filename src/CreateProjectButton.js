@@ -2,8 +2,8 @@ import './CreateProjectButton.css';
 
 function CreateProjectButton() {
   return(
-    <div class="newProject">
-      <button class="CreateNewProject" 
+    <div className="newProject">
+      <button className="CreateNewProject" 
         onClick={ 
         (event) => {
           console.log('click')

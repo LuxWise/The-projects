@@ -2,7 +2,7 @@ import './ProjectTitle.css';
 
 function ProjectTitle() {
   return(
-    <div class="projects">
+    <div className="projects">
       <h2>Projects</h2>
     </div>
   );
