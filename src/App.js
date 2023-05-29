@@ -34,28 +34,29 @@ function useLocalStorage(itemName, initialValue) {
   let parcedItem;
 
   if(!localStorageItem){
-    localStorage.setItem('PROJECTS_V1', JSON.stringify(initialValue));
-    parcedItem = initValue;
-
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+    parcedItem = initialValue;
   }else {
     parcedItem = JSON.parse(localStorageItem);
   }
   
-  const [Item, setItem] =  React.useState();
+  const [Item, setItem] =  React.useState(parcedItem);
 
   const saveItem = (newItem) => {
-    localStorage.setItem('PROJECTS_V1', JSON.stringify(newItem));
-
+    localStorage.setItem(itemName, JSON.stringify(newItem));
     setItem(newItem);
   }
+
+  return [Item, saveItem] ;
 }
+
 
 function App() {
   
 
   // <> = <React.Fragment>
 
-  const [projects, setProjects] = React.useState(parcedProjects);
+  const [projects, saveProjects] = useLocalStorage('PROJECTS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
   
   const totalProjects = projects.length;
@@ -66,8 +67,6 @@ function App() {
 
     return projectTitle.includes(searchTittle);
   });  
-
-  
   
   const processProjets = projects.filter(
     project => project.status === 'v' ).length;
@@ -78,7 +77,6 @@ function App() {
   
 
   const statusProjects = (title) => {
-
     const statusArray = [...projects];
     const statusIndex = statusArray.findIndex(
       status => status.title === title
