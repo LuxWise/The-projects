@@ -1,4 +1,5 @@
 import './ProjectList.css';
+import { ProjectItem } from './ProjectItem';
 
 function ProjectList(props) {
   return(
@@ -8,4 +9,4 @@ function ProjectList(props) {
   );
 }
 
-export { ProjectList };
+export { ProjectList, ProjectItem };

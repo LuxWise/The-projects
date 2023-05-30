@@ -1,16 +1,11 @@
 import React from 'react';
 
-import { NavbarLeft } from './NavbarLeft.js';
-import { NavbarRight } from './NavbarRight.js';
-import { ProjectIndex } from './ProjectIndex.js';
-import { ProjectSearch } from './ProjectSearch.js';
-import { ProjectUser } from './ProjectUser.js';
+import { NavbarLeft, ProjectIndex, ProjectSearch } from './NavbarLeft';
+import { NavbarRight, ProjectUser } from './NavbarRight';
 import { ProjectTitle } from './ProjectTitle';
-import { CreateProjectButton } from './CreateProjectButton.js';
-
-import { ProjectList } from './ProjectList.js';
-import { ProjectItem } from './ProjectItem.js';
-import { ProjectCounter } from './ProjectCounter.js';
+import { CreateProjectButton } from './CreateProjectButton';
+import { ProjectList, ProjectItem } from './ProjectList';
+import { ProjectCounter } from './ProjectCounter';
 
 /*
 const defaultProjects = [

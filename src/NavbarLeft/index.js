@@ -1,4 +1,7 @@
 import './NavbarLeft.css';
+import { ProjectIndex } from './ProjectIndex';
+import { ProjectSearch } from './ProjectSearch';
+
 
 function NavbarLeft(props) {
   return(
@@ -10,4 +13,4 @@ function NavbarLeft(props) {
   );
 }
   
-export { NavbarLeft };
+export { NavbarLeft, ProjectIndex, ProjectSearch };

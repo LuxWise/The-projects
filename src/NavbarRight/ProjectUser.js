@@ -1,4 +1,4 @@
-import avatar from './img/alex-suprun-bYODySpLIhE-unsplash.jpg';
+import avatar from '../img/alex-suprun-bYODySpLIhE-unsplash.jpg';
 import './ProjectUser.css'; 
 
 function ProjectUser(props) {

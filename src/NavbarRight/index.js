@@ -1,4 +1,5 @@
 import './NavbarRight.css';
+import { ProjectUser } from './ProjectUser';
 
 function NavbarRight(props) {
   return(
@@ -11,4 +12,4 @@ function NavbarRight(props) {
   );
 }
   
-export { NavbarRight };
+export { NavbarRight, ProjectUser  };
