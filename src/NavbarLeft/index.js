@@ -3,14 +3,18 @@ import { ProjectIndex } from './ProjectIndex';
 import { ProjectSearch } from './ProjectSearch';
 
 
-function NavbarLeft(props) {
+function NavbarLeft({ searchValue, setSearchValue }) {
   return(
     <div className='navbar-left'>
       <ul>
-        {props.children}
+        <ProjectIndex/>
+        <ProjectSearch 
+          searchValue = {searchValue} 
+          setSearchValue = {setSearchValue} 
+        />
       </ul>
     </div>
   );
 }
   
-export { NavbarLeft, ProjectIndex, ProjectSearch };
+export { NavbarLeft};

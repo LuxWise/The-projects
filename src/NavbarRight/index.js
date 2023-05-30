@@ -1,15 +1,17 @@
 import './NavbarRight.css';
 import { ProjectUser } from './ProjectUser';
 
-function NavbarRight(props) {
+function NavbarRight({ name }) {
   return(
     <div className="navbar-right">
       <ul>
-        {props.children}
+        <ProjectUser
+          name = {name}
+        /> 
       </ul>
     </div>  
     
   );
 }
   
-export { NavbarRight, ProjectUser  };
+export { NavbarRight };

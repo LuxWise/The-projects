@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { NavbarLeft, ProjectIndex, ProjectSearch } from './NavbarLeft';
-import { NavbarRight, ProjectUser } from './NavbarRight';
-import { ProjectTitle } from './ProjectTitle';
-import { CreateProjectButton } from './CreateProjectButton';
-import { ProjectList, ProjectItem } from './ProjectList';
-import { ProjectCounter } from './ProjectCounter';
+import { useLocalStorage } from './useLocalStorage';
+
+import { NavbarLeft} from '../NavbarLeft';
+import { NavbarRight } from '../NavbarRight';
+import { ProjectTitle } from '../ProjectTitle';
+import { CreateProjectButton } from '../CreateProjectButton';
+import { ProjectList } from '../ProjectList';
+import { ProjectCounter } from '../ProjectCounter';
 
 /*
 const defaultProjects = [
@@ -21,30 +23,6 @@ const projectStringified = JSON.stringify(defaultProjects);
 localStorage.setItem('PROJECTS_V1', projectStringified)
 
 */
-
-function useLocalStorage(itemName, initialValue) {
-
-  const localStorageItem = localStorage.getItem(itemName);
-
-  let parcedItem;
-
-  if(!localStorageItem){
-    localStorage.setItem(itemName, JSON.stringify(initialValue));
-    parcedItem = initialValue;
-  }else {
-    parcedItem = JSON.parse(localStorageItem);
-  }
-  
-  const [Item, setItem] =  React.useState(parcedItem);
-
-  const saveItem = (newItem) => {
-    localStorage.setItem(itemName, JSON.stringify(newItem));
-    setItem(newItem);
-  }
-
-  return [Item, saveItem] ;
-}
-
 
 function App() {
   
@@ -90,35 +68,23 @@ function App() {
   return (
     <>
       <nav>
-        <NavbarLeft>
-          <ProjectIndex/>
-          <ProjectSearch
-            searchValue = {searchValue}
-            setSearchValue = {setSearchValue}
-          />
-        </ NavbarLeft>
-        <NavbarRight>
-          <ProjectUser name='jcsanchez55' />
-        </NavbarRight>
+        <NavbarLeft
+          searchValue = {searchValue}
+          setSearchValue = {setSearchValue}
+        />
+        <NavbarRight
+          name = 'jcsanchez55'
+        />
       </nav>
       <section className='titlesContainer'>
         <ProjectTitle/>
         <CreateProjectButton/> 
       </section>
       <section className="projectsContainer">
-        <ProjectList>
-          {searchedProjects.map(project => (
-            <ProjectItem 
-              key = {project.title}
-              color = {project.color}
-              title = {project.title}
-              date = {project.date}
-              status = {project.status}
-              onStatus = {() => statusProjects(project.title)}
-            />
-          ))}
-        </ProjectList>
-
+        <ProjectList
+          searchedProjects = {searchedProjects}
+          statusProjects = {statusProjects}
+        />
         <ProjectCounter 
           total = {totalProjects} 
           processProjets = {processProjets}
