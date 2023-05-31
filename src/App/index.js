@@ -1,13 +1,8 @@
 import React from 'react';
 
 import { useLocalStorage } from './useLocalStorage';
+import { AppUI } from './AppUI';
 
-import { NavbarLeft} from '../NavbarLeft';
-import { NavbarRight } from '../NavbarRight';
-import { ProjectTitle } from '../ProjectTitle';
-import { CreateProjectButton } from '../CreateProjectButton';
-import { ProjectList } from '../ProjectList';
-import { ProjectCounter } from '../ProjectCounter';
 
 /*
 const defaultProjects = [
@@ -66,35 +61,17 @@ function App() {
   }
 
   return (
-    <>
-      <nav>
-        <NavbarLeft
-          searchValue = {searchValue}
-          setSearchValue = {setSearchValue}
-        />
-        <NavbarRight
-          name = 'jcsanchez55'
-        />
-      </nav>
-      <section className='titlesContainer'>
-        <ProjectTitle/>
-        <CreateProjectButton/> 
-      </section>
-      <section className="projectsContainer">
-        <ProjectList
-          searchedProjects = {searchedProjects}
-          statusProjects = {statusProjects}
-        />
-        <ProjectCounter 
-          total = {totalProjects} 
-          processProjets = {processProjets}
-          detainedProjets = {detainedProjets}
-          abandonedProjets = {abandonedProjets}
-        />
-
-      </section>
-    </>
-  );
+    <AppUI
+      searchValue = {searchValue}
+      setSearchValue = {setSearchValue}
+      searchedProjects = {searchedProjects}
+      statusProjects = {statusProjects}
+      totalProjects = {totalProjects}
+      processProjets = {processProjets}
+      detainedProjets = {detainedProjets}
+      abandonedProjets = {abandonedProjets}
+    /> 
+  )
 }
 
 export default App;
