@@ -4,6 +4,7 @@ import { ProjectTitle } from '../ProjectTitle';
 import { CreateProjectButton } from '../CreateProjectButton';
 import { ProjectList } from '../ProjectList';
 import { ProjectCounter } from '../ProjectCounter';
+import { ProjectItem } from '../ProjectItem';
 
 function AppUI({
   searchValue, setSearchValue, searchedProjects, statusProjects, totalProjects, detainedProjets, abandonedProjets, processProjets
@@ -24,10 +25,18 @@ function AppUI({
         <CreateProjectButton/> 
       </section>
       <section className="projectsContainer">
-        <ProjectList
-          searchedProjects = {searchedProjects}
-          statusProjects = {statusProjects}
-        />
+        <ProjectList>
+         {searchedProjects.map(project => (
+            <ProjectItem 
+              key = {project.title}
+              color = {project.color}
+              title = {project.title}
+              date = {project.date}
+              status = {project.status}
+              onStatus = {() => statusProjects(project.title)}
+            />
+          ))} 
+        </ProjectList>
         <ProjectCounter 
           total = {totalProjects} 
           processProjets = {processProjets}
