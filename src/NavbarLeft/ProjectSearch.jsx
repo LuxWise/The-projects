@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProjectSearch.css';
-import searchIcon from '../icons/searchIcon.png';
+import searchIcon from '../assets/icons/searchIcon.png';
 
 function ProjectSearch({
   searchValue,

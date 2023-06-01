@@ -43,7 +43,7 @@ function App() {
   const abandonedProjets = projects.filter(
     project => project.status === 'x' ).length;
   
-
+  
   const statusProjects = (title) => {
     const statusArray = [...projects];
     const statusIndex = statusArray.findIndex(
@@ -59,6 +59,13 @@ function App() {
     statusArray[statusIndex].status = setStatus[statusArray[statusIndex].status]
     saveProjects(statusArray);
   }
+
+  console.log('hello 1');
+  console.log('Hello 2');
+  React.useEffect(() => {
+    console.log('Hello 3')
+  }, []);
+
 
   return (
     <AppUI

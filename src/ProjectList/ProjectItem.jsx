@@ -1,5 +1,5 @@
 import './ProjectItem.css';
-import { StatusIcon } from './StatusIcon.js';
+import { StatusIcon } from './StatusIcon';
 
 function ProjectItem({ color,title,date,status,onStatus }) {
 
