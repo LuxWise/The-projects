@@ -45,6 +45,7 @@ function ProjectProvider({children}){
     statusArray[statusIndex].status = setStatus[statusArray[statusIndex].status]
     saveProjects(statusArray);
   }
+
   const name = 'jcsanchez55';
 
 	return(
