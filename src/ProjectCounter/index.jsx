@@ -1,17 +1,22 @@
+import React from 'react';
 import './ProjectCounter.css';
+import { ProjectContext } from '../ProjectContext'
 
-function ProjectCounter({ 
-  total, 
-  processProjets, 
-  detainedProjets,
-  abandonedProjets
-}) {
+function ProjectCounter() {
+  
+  const { 
+    totalProjects,
+    processProjets,
+    detainedProjets,
+    abandonedProjets 
+  } = React.useContext(ProjectContext)
+
   return(
     <div className="projectsDescription">
       <div className="totalProjects">	
 	      <h3>Total proyectos</h3>
 	        <div>
-            <p>{total} Proyectos en proceso</p>
+            <p>{totalProjects} Proyectos en proceso</p>
 	        </div>
       </div>
       

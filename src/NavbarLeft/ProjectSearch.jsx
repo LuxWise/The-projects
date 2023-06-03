@@ -1,13 +1,14 @@
 import React from 'react';
 import './ProjectSearch.css';
 import searchIcon from '../assets/icons/searchIcon.png';
+import { ProjectContext } from '../ProjectContext';
 
-function ProjectSearch({
-  searchValue,
-  setSearchValue,
-}){
-/* const [searchValue, setSearchValue] = React.useState('');
-    console.log('se buscan los proyectos de ' + searchValue); */
+function ProjectSearch(){
+
+  const {
+    setSearchValue,
+    searchValue
+  } = React.useContext( ProjectContext )
 
   return(
     <li>
