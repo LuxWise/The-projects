@@ -1,16 +1,14 @@
+import react from 'react';
 import './CreateProjectButton.css';
+import { ProjectContext } from '../ProjectContext';
 
 function CreateProjectButton() {
+  const { setOpenModal } = react.useContext(ProjectContext);
+
   return(
     <div className="newProject">
       <button className="CreateNewProject" 
-        onClick={ 
-        (event) => {
-          console.log('click')
-          console.log(event)
-          console.log(event.target)
-          }
-        } >
+        onClick={ () => {setOpenModal(true)} }>
         Nuevo Proyecto
       </button>
 	  </div> 

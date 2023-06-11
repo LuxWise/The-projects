@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body{
+	font-family: 'Inter', sans-serif;
+}
+
+.NewProjectContainer {
+	width: 70%;
+	height: 60%;
+	background-color: #F8FAFF;
+	border-radius: 10px;
+}
+
+.NewProjectTitle{
+	color: black;
+	text-align: center;
+	margin: 35px 0;
+	font-size: 28px;
+}
+
+form {
+	display: flex;
+	justify-content: space-between;
+	color: black;
+}
+
+.NewProjectLeft{
+	display: flex;
+	flex-direction: column;
+	margin: 15px 0px 0px 70px
+}
+
+.NewProjectLeft div{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.NewProjectLeft div:nth-child(1) label {
+ 	font-size: 20px;
+	font-weight: 500;
+	margin: 0 0 15px 15px;
+}
+
+textarea{
+	background-color:#D1EAF1;
+	border-radius:4px;
+	font-size:16px;
+	border: none;
+	resize: none;
+	padding:10px;
+	height:30px;
+	width: 500px;
+	font-family: 'Inter', sans-serif;
+}
+
+textarea:focus{
+	outline-color: #C8E2E9;
+}
+
+
+.NewProjectLeft div:nth-child(2) label {
+ 	font-size: 20px;
+	font-weight: 500;
+	margin: 0 0 15px 15px;
+}
+
+#dateColor {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.date input{
+	background-color:#D1EAF1;
+	border-radius:4px;
+	font-size:15px;
+	border: none;
+	resize: none;
+	padding:10px;
+	height:30px;
+	width: 200px;
+}
+
+.color input{
+	padding: 0;
+  border: none;
+  background: none;
+	outline: none;
+	width: 100px;
+	height: 50px;
+}
+
+
+.NewProjectRight {
+	display: flex;
+	flex-direction: column;
+}
+
+.NewProjectRight button{
+	margin: 60px 130px 0 40px ;
+	width: 150px;
+	height: 50px;
+	border-radius: 10px;
+	border: none;
+	font-size: 18px;
+	font-weight: 700;
+	font-family: 'Inter', sans-serif;
+}
+
+.NewProjectRight button:nth-child(1){
+	background-color: #B0DADD;
+}
+
+.NewProjectRight button:nth-child(2){
+	background-color: #3E709B;
+	color: white;
+}
+
+
+.NewProjectRight button:nth-child(1):hover{
+	background-color: #a8d6d9;
+	box-shadow: 0px 0px 30px -13px rgb(168, 214, 217);
+}
+
+.NewProjectRight button:nth-child(2):hover{
+	background-color: #4475a0;
+	box-shadow: 0px 0px 30px -13px rgb(68, 117, 160);
+}
+
+
+
+@media (max-width: 1180px){
+	textarea{
+		width: 400px;
+	}
+}

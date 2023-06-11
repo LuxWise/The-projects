@@ -11,7 +11,10 @@ function ProjectProvider({children}){
     loading,
     error  
   } = useLocalStorage('PROJECTS_V1', []);
+
   const [searchValue, setSearchValue] = React.useState('');
+  
+  const [openModal, setOpenModal] = React.useState(false);
   
   const totalProjects = projects.length;
 
@@ -46,6 +49,23 @@ function ProjectProvider({children}){
     saveProjects(statusArray);
   }
 
+  const addProject = (title, color) => {
+    const newProjects = [...projects];
+    const fecha = new Date();
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1;
+    const año = fecha.getFullYear();
+    const fechaActual = `${dia}/${mes}/${año}`;
+
+    newProjects.push({
+      title,
+      color,
+      date: fechaActual,
+      status: 'v',
+    });
+    saveProjects(newProjects);
+  }
+
   const name = 'jcsanchez55';
 
 	return(
@@ -60,7 +80,10 @@ function ProjectProvider({children}){
       totalProjects, 
       detainedProjets, 
       abandonedProjets, 
-      processProjets
+      processProjets,
+      openModal,
+      setOpenModal,
+      addProject,
     }}>
       {children}
     </ProjectContext.Provider>
