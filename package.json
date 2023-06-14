@@ -32,6 +32,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "htts://outs1ders.github.io/The-projects",
   "devDependencies": {
     "gh-pages": "^5.0.0"
   }
